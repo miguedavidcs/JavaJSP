@@ -1,0 +1,5 @@
+PRODUCTO CON MAYOR STOCK
+SELECT * FROM `producto` WHERE Stock = (SELECT MAX( Stock )  FROM `producto`)
+
+PRODUCTO MAS VENDIDO
+SELECT idProducto, COUNT(idProducto) FROM detalle_ventas GROUP BY IdProducto;
